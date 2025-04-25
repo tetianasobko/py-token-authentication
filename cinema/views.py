@@ -118,7 +118,7 @@ class MovieSessionListCreateView(DefaultAuthMixin, generics.ListCreateAPIView):
         return queryset
 
     def get_serializer_class(self):
-        if self.request.method.lower() == "list":
+        if self.request.method.lower() == "get":
             return MovieSessionListSerializer
 
         return MovieSessionSerializer
